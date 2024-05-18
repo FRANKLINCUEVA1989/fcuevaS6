@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="fcuevaS6.Views.vEstudiante"
+             Title="vEstudiante">
+    <VerticalStackLayout>
+        <Label 
+            Text="CONSUMO DE REST"
+            FontSize="24"
+            HorizontalTextAlignment="Center"/>
+        <Grid  Padding="2, 2, 2, 2" BackgroundColor="Yellow">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="170"/>
+
+            </Grid.ColumnDefinitions>
+            <Label Text="CODIGO"
+            TextColor="Blue"
+            Grid.Row="0"
+            Grid.Column="0"/>
+
+            <Label Text="NOMBRE"
+             TextColor="Blue"
+             Grid.Row="0"
+             Grid.Column="1"/>
+            <Label Text="APELLIDO"
+             TextColor="Blue"
+             Grid.Row="0"
+             Grid.Column="2"/>
+            <Label Text="EDAD"
+             TextColor="Blue"
+             Grid.Row="0"
+             Grid.Column="3"/>
+        </Grid>
+
+
+
+
+        <ListView x:Name="listEstudiante">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+
+                            <Grid  BackgroundColor="Beige" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+                                    <RowDefinition />
+
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="200"/>
+                                    
+
+
+                                </Grid.ColumnDefinitions>
+
+                               
+                                
+                                    <Label x:Name="lblCodigo" Text="{Binding codigo}" 
+                                           TextColor="Black"
+                                        Grid.Row="1"
+                                        Grid.Column="0"/>
+
+                                <Label x:Name="lblNombre" Text="{Binding nombre}" 
+                                       TextColor="Black"
+                                       Grid.Row="1"
+                                        Grid.Column="1"/>
+                                    
+                                <Label x:Name="lblApellido" Text="{Binding apellido}"
+                                      TextColor="Black"
+                                       Grid.Row="1"
+                                        Grid.Column="2"/>
+                                
+                                <Label x:Name="lblEdad" Text="{Binding edad}"
+                                       TextColor="Black" 
+                                       Grid.Row="1"
+                                         Grid.Column="3"/>
+                                
+
+                            </Grid>
+
+
+                        </StackLayout>
+                    </ViewCell>
+
+                </DataTemplate>
+
+
+            </ListView.ItemTemplate>
+
+
+
+
+        </ListView>
+
+
+    </VerticalStackLayout>
+</ContentPage>
